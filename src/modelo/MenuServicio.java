@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MenuServicio {
-    private String nombreArchivo = "test/base_datos_menus.txt";
+    private String nombreArchivo = "src/test/base_datos_menus.txt";
     private List<Menu> menus = new ArrayList<>();
     private int nextId = 1;
     private IngredienteServicio ingServicio;

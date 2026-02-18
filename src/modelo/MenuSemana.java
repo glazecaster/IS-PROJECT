@@ -7,7 +7,7 @@ import java.util.Map;
 public class MenuSemana {
     private Map<String, Integer> desayunos;
     private Map<String, Integer> almuerzos;
-    private String nombreArchivo = "test/base_datos_menu_semana.txt";
+    private String nombreArchivo = "src/test/base_datos_menu_semana.txt";
     
     public MenuSemana() {
         desayunos = new HashMap<>();

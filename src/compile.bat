@@ -11,7 +11,7 @@ if not exist bin mkdir bin
 
 echo.
 echo Compilando archivos...
-javac -d bin -cp ".;src_old" src_old/app/App.java src_old/controller/*.java src_old/controlador/*.java src_old/modelo/*.java src_old/model/*.java src_old/vista/*.java src_old/view/*.java src_old/view/listeners/*.java
+javac -d bin -cp ".;src" src/app/App.java src/controller/*.java src/controlador/*.java src/modelo/*.java src/model/*.java src/vista/*.java src/view/*.java src/view/listeners/*.java
 
 if %errorlevel% equ 0 (
     echo.
