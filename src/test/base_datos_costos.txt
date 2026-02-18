@@ -1,12 +1,9 @@
-1|Arroz|kg|2.5|100.0|Granos
-2|Pollo|kg|5.8|50.0|Carnes
-3|Tomate|kg|1.2|30.0|Verduras
-4|Cebolla|kg|0.9|40.0|Verduras
-5|Queso Blanco|kg|8.5|20.0|Lácteos
-6|Harina de Maíz|kg|1.8|60.0|Granos
-7|Aceite|litro|3.2|30.0|Aceites
-8|Sal|kg|0.5|10.0|Condimentos
-9|Papa|kg|1.1|80.0|Verduras
-10|Carne Molida|kg|7.5|40.0|Carnes
-11|Lechuga|unidad|0.8|25.0|Verduras
-12|Huevos|unidad|0.25|200.0|Lácteos
+Costo Fijo|Lunes|Alquiler de local|2500.00|Fijo|0g|0 kcal
+Costo Fijo|Lunes|Servicios públicos|800.00|Fijo|0g|0 kcal
+Costo Fijo|Lunes|Salarios personal|4500.00|Fijo|0g|0 kcal
+Costo Variable|Lunes|Insumos de limpieza|350.00|1 semanas|0g|0 kcal
+Costo Variable|Martes|Transporte de insumos|200.00|1 semanas|0g|0 kcal
+Menú|Lunes|Pollo al curry|8.50|Fijo|35-45 g|550-700 kcal
+Menú|Lunes|Arroz blanco|1.50|Fijo|4.3 g|205-215 kcal
+Menú|Martes|Pescado a la plancha|9.00|Fijo|32-40 g|420-520 kcal
+Menú|Miércoles|Pasta con salsa|7.50|Fijo|18-25 g|520-680 kcal
