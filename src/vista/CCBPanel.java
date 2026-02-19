@@ -1,3 +1,4 @@
+// Archivo: vista/CCBPanel.java (COMPLETO Y ACTUALIZADO)
 package vista;
 
 import javax.swing.*;
@@ -24,6 +25,7 @@ public class CCBPanel extends JPanel {
     private JTextArea txtDesglose;
     private JLabel lblInfoSubsidio;
     private JLabel lblEstadoIngredientes;
+    private JLabel lblInfoProyeccion;
     
     public CCBPanel(JFrame parent) {
         this(parent, null);
@@ -47,6 +49,7 @@ public class CCBPanel extends JPanel {
         initComponents();
         actualizarCCB();
         actualizarPrecios();
+        actualizarInfoProyeccion();
     }
     
     private void configurarMenuBar(JFrame frame) {
@@ -88,13 +91,21 @@ public class CCBPanel extends JPanel {
         acercaMenuItem.addActionListener(e -> {
             JOptionPane.showMessageDialog(frame,
                 "CÁLCULO DE CCB (Costo por Comensal)\n\n" +
-                "El CCB es el costo operativo dividido entre el número de comensales.\n\n" +
-                "Fórmula: CCB = (Costos Fijos + Costos Variables) / Número de comensales\n\n" +
+                "Nueva fórmula implementada:\n" +
+                "CCB = [(CF + CV) / NB] * (1 + %Merma)\n\n" +
+                "Donde:\n" +
+                "• CF: Costos Fijos Totales\n" +
+                "• CV: Costos Variables Totales\n" +
+                "• NB: Número de Bandejas proyectadas\n" +
+                "• %Merma: Porcentaje de merma (5% por defecto)\n\n" +
+                "Distribución de costos:\n" +
+                "• Desayunos: 25% de costos fijos y variables\n" +
+                "• Almuerzos: 75% de costos fijos y variables\n\n" +
                 "Subsidios aplicados:\n" +
-                "• Estudiante: 70% de subsidio (paga 30%)\n" +
-                "• Profesor: 30% de subsidio (paga 70%)\n" +
-                "• Administrativo: 5% de subsidio (paga 95%)\n\n" +
-                "Margen operativo: 25%\n" +
+                "• Estudiante: 75% de subsidio (paga 25%)\n" +
+                "• Profesor: 40% de subsidio (paga 60%)\n" +
+                "• Administrativo: 15% de subsidio (paga 85%)\n\n" +
+                "Margen operativo: 15%\n" +
                 "IVA: 16%",
                 "Acerca de CCB",
                 JOptionPane.INFORMATION_MESSAGE);
@@ -150,6 +161,7 @@ public class CCBPanel extends JPanel {
         gbc.insets = new Insets(8, 8, 8, 8);
         gbc.fill = GridBagConstraints.HORIZONTAL;
         
+        // Fila 0: CCB Base y Tipo Usuario
         gbc.gridx = 0; gbc.gridy = 0;
         JLabel lblCCBLabel = new JLabel("CCB Base calculado:");
         lblCCBLabel.setFont(new Font("SansSerif", Font.BOLD, 14));
@@ -178,6 +190,7 @@ public class CCBPanel extends JPanel {
         gbc.gridx = 3;
         panelSuperior.add(comboTipoUsuario, gbc);
         
+        // Fila 1: Tipo Servicio y Día
         gbc.gridx = 0; gbc.gridy = 1;
         JLabel lblServicio = new JLabel("Tipo Servicio:");
         lblServicio.setFont(new Font("SansSerif", Font.BOLD, 12));
@@ -188,7 +201,11 @@ public class CCBPanel extends JPanel {
         });
         comboTipoServicio.setPreferredSize(new Dimension(150, 30));
         comboTipoServicio.setBackground(Color.WHITE);
-        comboTipoServicio.addActionListener(e -> actualizarPrecios());
+        comboTipoServicio.addActionListener(e -> {
+            actualizarCCB();
+            actualizarPrecios();
+            actualizarInfoProyeccion();
+        });
         gbc.gridx = 1;
         panelSuperior.add(comboTipoServicio, gbc);
         
@@ -206,6 +223,7 @@ public class CCBPanel extends JPanel {
         gbc.gridx = 3;
         panelSuperior.add(comboDia, gbc);
         
+        // Fila 2: Información de Subsidio
         JPanel panelInfoSubsidio = new JPanel(new BorderLayout());
         panelInfoSubsidio.setBackground(new Color(240, 248, 255));
         panelInfoSubsidio.setBorder(BorderFactory.createTitledBorder(
@@ -221,6 +239,7 @@ public class CCBPanel extends JPanel {
         gbc.gridx = 0; gbc.gridy = 2; gbc.gridwidth = 2;
         panelSuperior.add(panelInfoSubsidio, gbc);
         
+        // Fila 2 (continuación): Estado de Ingredientes
         JPanel panelEstadoIngredientes = new JPanel(new FlowLayout(FlowLayout.LEFT));
         panelEstadoIngredientes.setBackground(UIConstants.WHITE);
         lblEstadoIngredientes = new JLabel("✓ Todos los menús tienen ingredientes asignados");
@@ -231,7 +250,23 @@ public class CCBPanel extends JPanel {
         gbc.gridx = 2; gbc.gridy = 2; gbc.gridwidth = 2;
         panelSuperior.add(panelEstadoIngredientes, gbc);
         
-        // Botón de recalcular
+        // Fila 3: Información de Proyección
+        JPanel panelInfoProyeccion = new JPanel(new BorderLayout());
+        panelInfoProyeccion.setBackground(new Color(255, 255, 225));
+        panelInfoProyeccion.setBorder(BorderFactory.createTitledBorder(
+            BorderFactory.createLineBorder(UIConstants.YELLOW_WARNING),
+            "Proyección de Bandejas"
+        ));
+        
+        lblInfoProyeccion = new JLabel();
+        lblInfoProyeccion.setFont(new Font("Monospaced", Font.PLAIN, 11));
+        lblInfoProyeccion.setBorder(BorderFactory.createEmptyBorder(5, 10, 5, 10));
+        panelInfoProyeccion.add(lblInfoProyeccion, BorderLayout.CENTER);
+        
+        gbc.gridx = 0; gbc.gridy = 3; gbc.gridwidth = 4;
+        panelSuperior.add(panelInfoProyeccion, gbc);
+        
+        // Fila 4: Botones de acción
         JPanel panelBotones = new JPanel(new FlowLayout(FlowLayout.RIGHT, 10, 5));
         panelBotones.setBackground(UIConstants.WHITE);
         
@@ -239,16 +274,26 @@ public class CCBPanel extends JPanel {
         btnActualizarCCB.setBackground(UIConstants.BLUE_LIGHT);
         btnActualizarCCB.setFont(new Font("SansSerif", Font.BOLD, 12));
         btnActualizarCCB.setPreferredSize(new Dimension(150, 35));
-        btnActualizarCCB.addActionListener(e -> actualizarCCB());
+        btnActualizarCCB.addActionListener(e -> {
+            actualizarCCB();
+            actualizarPrecios();
+        });
         panelBotones.add(btnActualizarCCB);
         
-        gbc.gridx = 0; gbc.gridy = 3; gbc.gridwidth = 4;
+        JButton btnProyeccion = new JButton("📊 Proyección de Bandejas");
+        btnProyeccion.setBackground(UIConstants.YELLOW_LIGHT);
+        btnProyeccion.setFont(new Font("SansSerif", Font.BOLD, 12));
+        btnProyeccion.setPreferredSize(new Dimension(220, 35));
+        btnProyeccion.addActionListener(e -> abrirProyeccionBandejas());
+        panelBotones.add(btnProyeccion);
+        
+        gbc.gridx = 0; gbc.gridy = 4; gbc.gridwidth = 4;
         gbc.anchor = GridBagConstraints.EAST;
         panelSuperior.add(panelBotones, gbc);
         
         // Tabla de precios
         modeloTabla = new DefaultTableModel(
-            new Object[]{"ID", "Día", "Servicio", "Nombre", "Precio Base", "Precio Final", "% Pago", "Estado"}, 0
+            new Object[]{"ID", "Día", "Servicio", "Nombre", "Precio Base", "Precio Final", "% Pago", "Estado", "Bandejas"}, 0
         ) {
             @Override
             public boolean isCellEditable(int row, int column) {
@@ -305,7 +350,7 @@ public class CCBPanel extends JPanel {
             "Desglose de Costos - Menú Seleccionado"
         ));
         
-        txtDesglose = new JTextArea(10, 50);
+        txtDesglose = new JTextArea(12, 50);
         txtDesglose.setEditable(false);
         txtDesglose.setFont(new Font("Monospaced", Font.PLAIN, 12));
         txtDesglose.setBackground(new Color(245, 245, 245));
@@ -327,10 +372,21 @@ public class CCBPanel extends JPanel {
         add(panelCentro, BorderLayout.CENTER);
     }
     
+    private void abrirProyeccionBandejas() {
+        BandejaProyeccionDialog dialog = new BandejaProyeccionDialog(parentFrame, ccbCalculator.getBandejaProyeccion());
+        dialog.setVisible(true);
+        
+        if (dialog.isAceptado()) {
+            actualizarCCB();
+            actualizarPrecios();
+            actualizarInfoProyeccion();
+        }
+    }
+    
     private void actualizarCCB() {
-        double ccb = ccbCalculator.calcularCCB();
+        String tipoServicio = comboTipoServicio.getSelectedItem().toString();
+        double ccb = ccbCalculator.calcularCCB(tipoServicio);
         lblCCBBase.setText(String.format("$%.2f", ccb));
-        actualizarPrecios();
         actualizarInfoSubsidio();
     }
     
@@ -343,6 +399,22 @@ public class CCBPanel extends JPanel {
             tipoUsuario, descripcion, porcentaje, 100 - porcentaje));
     }
     
+    private void actualizarInfoProyeccion() {
+        String tipoServicio = comboTipoServicio.getSelectedItem().toString();
+        int totalBandejas = ccbCalculator.getBandejaProyeccion().getTotalBandejasServicio(tipoServicio);
+        double merma = ccbCalculator.getBandejaProyeccion().getPorcentajeMerma();
+        
+        if (totalBandejas == 0) {
+            lblInfoProyeccion.setText("<html>⚠ No hay proyecciones configuradas. Use el botón 'Proyección de Bandejas' para configurar.<br>" +
+                "Valores por defecto: Desayuno=800, Almuerzo=1500 bandejas/semana, Merma=5%</html>");
+        } else {
+            lblInfoProyeccion.setText(String.format(
+                "<html>✓ Proyección activa: %d bandejas/semana para %s | Merma: %.1f%% | " +
+                "Fórmula: CCB = [(CF+CV)/%d]*(1+%.0f%%)</html>",
+                totalBandejas, tipoServicio, merma, totalBandejas, merma));
+        }
+    }
+    
     private void actualizarPrecios() {
         modeloTabla.setRowCount(0);
         String tipoUsuario = comboTipoUsuario.getSelectedItem().toString();
@@ -353,25 +425,27 @@ public class CCBPanel extends JPanel {
         
         List<Menu> menus;
         if ("Todos".equals(dia)) {
-            menus = todosMenus;
+            menus = menuServicio.getMenusPorServicio(tipoServicio);
         } else {
-            menus = menuServicio.getMenusPorDia(dia);
+            menus = menuServicio.getMenusPorDiaYServicio(dia, tipoServicio);
         }
         
         // Verificar si hay menús para mostrar
-        if (menus.isEmpty() && !"Todos".equals(dia)) {
-            int respuesta = JOptionPane.showConfirmDialog(this,
-                "No hay menús disponibles para el día " + dia + ".\n" +
-                "¿Desea ir a la gestión de menús para agregar uno?",
-                "Sin menús disponibles",
-                JOptionPane.YES_NO_OPTION,
-                JOptionPane.QUESTION_MESSAGE);
-            
-            if (respuesta == JOptionPane.YES_OPTION) {
-                if (parentFrame != null) {
-                    parentFrame.dispose();
+        if (menus.isEmpty()) {
+            if (!"Todos".equals(dia)) {
+                int respuesta = JOptionPane.showConfirmDialog(this,
+                    "No hay menús disponibles para " + tipoServicio + " el día " + dia + ".\n" +
+                    "¿Desea ir a la gestión de menús para agregar uno?",
+                    "Sin menús disponibles",
+                    JOptionPane.YES_NO_OPTION,
+                    JOptionPane.QUESTION_MESSAGE);
+                
+                if (respuesta == JOptionPane.YES_OPTION) {
+                    if (parentFrame != null) {
+                        parentFrame.dispose();
+                    }
+                    abrirGestionMenus(parentFrame);
                 }
-                abrirGestionMenus(parentFrame);
             }
             return;
         }
@@ -379,30 +453,49 @@ public class CCBPanel extends JPanel {
         double porcentajePago = 100 - ccbCalculator.getPorcentajeSubsidio(tipoUsuario);
         boolean todosConIngredientes = true;
         
+        // Obtener número de bandejas para mostrar información
+        int bandejasServicio = ccbCalculator.getBandejaProyeccion().getTotalBandejasServicio(tipoServicio);
+        String infoBandejas = bandejasServicio > 0 ? String.valueOf(bandejasServicio) : "Por defecto";
+        
         for (Menu menu : menus) {
-            if (!"Todos".equals(dia) || menu.getTipoServicio().equalsIgnoreCase(tipoServicio)) {
-                boolean tieneIngredientes = menu.tieneIngredientes();
-                if (!tieneIngredientes) {
-                    todosConIngredientes = false;
-                }
-                
-                double precioFinal = tieneIngredientes ? 
+            boolean tieneIngredientes = menu.tieneIngredientes();
+            if (!tieneIngredientes) {
+                todosConIngredientes = false;
+            }
+            
+            double precioFinal;
+            if ("Todos".equals(dia)) {
+                precioFinal = tieneIngredientes ? 
                     ccbCalculator.calcularPrecioMenu(menu, tipoUsuario, tipoServicio) : 
                     menu.getPrecioVenta();
-                
-                String estado = tieneIngredientes ? "COMPLETO" : "SIN INGREDIENTES";
-                
-                modeloTabla.addRow(new Object[]{
-                    menu.getId(),
-                    menu.getDia(),
-                    menu.getTipoServicio(),
-                    menu.getNombre(),
-                    String.format("$%.2f", menu.getPrecioVenta()),
-                    tieneIngredientes ? String.format("$%.2f", precioFinal) : "No disponible",
-                    tieneIngredientes ? String.format("%.0f%%", porcentajePago) : "-",
-                    estado
-                });
+            } else {
+                precioFinal = tieneIngredientes ? 
+                    ccbCalculator.calcularPrecioMenuPorDia(menu, dia, tipoUsuario, tipoServicio) : 
+                    menu.getPrecioVenta();
             }
+            
+            String estado = tieneIngredientes ? "COMPLETO" : "SIN INGREDIENTES";
+            
+            // Obtener bandejas específicas para este día (si aplica)
+            String bandejasDia = "";
+            if (!"Todos".equals(dia)) {
+                int bandejas = "Desayuno".equals(tipoServicio) ? 
+                    ccbCalculator.getBandejaProyeccion().getProyeccionDesayuno(dia) :
+                    ccbCalculator.getBandejaProyeccion().getProyeccionAlmuerzo(dia);
+                bandejasDia = bandejas > 0 ? String.valueOf(bandejas) : "N/E";
+            }
+            
+            modeloTabla.addRow(new Object[]{
+                menu.getId(),
+                menu.getDia(),
+                menu.getTipoServicio(),
+                menu.getNombre(),
+                String.format("$%.2f", menu.getPrecioVenta()),
+                tieneIngredientes ? String.format("$%.2f", precioFinal) : "No disponible",
+                tieneIngredientes ? String.format("%.0f%%", porcentajePago) : "-",
+                estado,
+                "Todos".equals(dia) ? infoBandejas : bandejasDia
+            });
         }
         
         if (todosConIngredientes) {
@@ -422,6 +515,7 @@ public class CCBPanel extends JPanel {
         tablaPrecios.getColumnModel().getColumn(5).setPreferredWidth(80);  // Precio Final
         tablaPrecios.getColumnModel().getColumn(6).setPreferredWidth(60);  // % Pago
         tablaPrecios.getColumnModel().getColumn(7).setPreferredWidth(100); // Estado
+        tablaPrecios.getColumnModel().getColumn(8).setPreferredWidth(80);  // Bandejas
     }
     
     private void mostrarDesgloseSeleccionado() {
@@ -491,7 +585,18 @@ public class CCBPanel extends JPanel {
                 ccbCalculator.calcularDesgloseCostos(menuSeleccionado, tipoUsuario, tipoServicio);
             
             if (desglose != null) {
-                txtDesglose.setText(desglose.toString());
+                // Agregar información de proyección al desglose
+                int bandejas = ccbCalculator.getBandejaProyeccion().getTotalBandejasServicio(tipoServicio);
+                double merma = ccbCalculator.getBandejaProyeccion().getPorcentajeMerma();
+                
+                String infoProyeccion = String.format(
+                    "\n╟──────────────────────────────────────────────────────────╢\n" +
+                    "║  Proyección: %d bandejas/semana | Merma: %.1f%%            ║",
+                    bandejas, merma);
+                
+                txtDesglose.setText(desglose.toString().replace(
+                    "╚══════════════════════════════════════════════════════════╝",
+                    infoProyeccion + "\n╚══════════════════════════════════════════════════════════╝"));
             } else {
                 txtDesglose.setText("╔══════════════════════════════════════════════════════════╗\n" +
                                     "║              ERROR EN EL CÁLCULO DE COSTOS                ║\n" +
@@ -518,5 +623,7 @@ public class CCBPanel extends JPanel {
     
     public void refrescar() {
         actualizarCCB();
+        actualizarPrecios();
+        actualizarInfoProyeccion();
     }
 }
