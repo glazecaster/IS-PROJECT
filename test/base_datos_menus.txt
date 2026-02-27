@@ -1,0 +1,77 @@
+1|Lunes|Desayuno Continental|Desayuno|Desayuno|Café, jugo de naranja, pan tostado con mermelada y mantequilla|8-10 g|50-60 g|350-400 kcal|4.5|0
+2|Lunes|Arepas con Queso|Desayuno|Desayuno|Arepas de maíz rellenas con queso blanco|15-20 g|45-50 g|380-420 kcal|3.5|3|5|0.1|6|0.15|8|0.01
+3|Lunes|Pollo al Curry|Plato principal|Almuerzo|Pollo condimentado con especias y cocinado a la plancha|35-45 g|50-65 g|550-700 kcal|8.5|0
+4|Lunes|Arroz Blanco|Acompañante|Almuerzo|Arroz blanco cocido al vapor|4.3 g|45 g|205-215 kcal|1.5|0
+5|Lunes|Empanadas de Queso|Desayuno|Desayuno|Dos empanadas fritas de queso blanco|12 g|40 g|450 kcal|2.5|3|5|0.1|6|0.1|7|0.02
+6|Lunes|Pabellón Criollo|Plato principal|Almuerzo|Arroz, caraotas, carne mechada y tajadas|35 g|80 g|850 kcal|6.5|5|1|0.1|14|0.1|102|0.15|19|0.1|3|0.1
+7|Lunes|Arepa Pelúa|Desayuno|Desayuno|Arepa rellena con carne mechada y queso amarillo|25 g|45 g|500 kcal|4.0|3|6|0.1|102|0.1|5|0.05
+8|Lunes|Arroz con Pollo|Plato principal|Almuerzo|Arroz sazonado con pollo desmenuzado y vegetales|30 g|60 g|600 kcal|4.5|4|1|0.1|2|0.2|9|0.02|10|0.02
+9|Martes|Arepa Reina Pepiada|Desayuno|Desayuno|Arepa rellena con pollo, aguacate y mayonesa|20 g|40 g|550 kcal|4.5|3|6|0.1|2|0.1|42|0.02
+10|Martes|Hervido de Res|Plato principal|Almuerzo|Sopa espesa de costilla con verduras y tubérculos|25 g|50 g|450 kcal|5.0|4|80|0.2|34|0.1|35|0.1|11|0.1
+11|Martes|Empanada de Cazón|Desayuno|Desayuno|Empanada frita rellena de pescado guisado|18 g|38 g|420 kcal|3.0|3|101|0.1|103|0.1|7|0.02
+12|Martes|Pasta con Carne Molida|Plato principal|Almuerzo|Pasta corta con salsa boloñesa criolla|28 g|70 g|650 kcal|4.0|3|15|0.12|10|0.15|30|0.05
+13|Miércoles|Perico con Arepa|Desayuno|Desayuno|Huevos revueltos con tomate y cebolla y arepa|15 g|45 g|400 kcal|3.5|4|16|2.0|9|0.02|10|0.02|6|0.1
+14|Miércoles|Asado Negro|Plato principal|Almuerzo|Carne de res en salsa negra de papelón con arroz|35 g|55 g|750 kcal|7.0|3|6|0.2|1|0.1|46|0.05
+15|Miércoles|Pan con Queso y Jamón|Desayuno|Desayuno|Pan canilla relleno de jamón y queso|18 g|50 g|480 kcal|3.0|3|51|1.0|32|0.05|5|0.05
+16|Miércoles|Caraotas con Azúcar|Acompañante|Almuerzo|Caraotas negras con un toque de azúcar y queso|12 g|40 g|350 kcal|2.0|3|14|0.15|17|0.01|5|0.03
+17|Jueves|Arepa de Dominó|Desayuno|Desayuno|Arepa rellena con caraotas negras y queso blanco|15 g|50 g|450 kcal|3.0|3|6|0.1|14|0.08|5|0.04
+18|Jueves|Pollo Frito con Yuca|Plato principal|Almuerzo|Presas de pollo fritas con yuca hervida y guasacaca|35 g|45 g|700 kcal|5.5|3|2|0.25|30|0.2|7|0.03
+19|Jueves|Empanada de Pabellón|Desayuno|Desayuno|Empanada rellena de carne, caraota y tajada|20 g|45 g|550 kcal|3.5|3|101|0.1|102|0.05|14|0.05
+20|Jueves|Escalope de Pollo|Plato principal|Almuerzo|Pechuga de pollo empanizada con puré de papas|32 g|40 g|580 kcal|5.0|3|2|0.2|9|0.2|25|0.01
+21|Viernes|Cachapa con Queso de Mano|Desayuno|Desayuno|Tortilla de maíz tierno con queso telita o de mano|15 g|60 g|600 kcal|5.0|2|5|0.15|7|0.01
+22|Viernes|Pescado Frito|Plato principal|Almuerzo|Pescado entero frito con arroz y ensalada rayada|30 g|50 g|650 kcal|7.5|4|99|0.3|1|0.1|37|0.05|38|0.05
+23|Viernes|Arepa con Diablito|Desayuno|Desayuno|Arepa rellena con jamón endiablado y mantequilla|12 g|45 g|410 kcal|3.0|2|6|0.1|25|0.01
+24|Viernes|Chuleta Ahumada|Plato principal|Almuerzo|Chuleta de cerdo con arroz y plátano horneado|28 g|65 g|700 kcal|6.0|3|31|0.2|1|0.1|19|0.1
+25|Lunes|Sandwich de Atún|Desayuno|Desayuno|Pan de sándwich con atún, cebolla y mayonesa|22 g|35 g|380 kcal|3.5|3|53|2.0|78|0.1|42|0.01
+26|Lunes|Pasticho Criollo|Plato principal|Almuerzo|Lasaña al estilo venezolano con carne y jamón|35 g|60 g|850 kcal|7.0|3|15|0.1|10|0.1|32|0.05
+27|Martes|Bollitos Preñados|Desayuno|Desayuno|Masa de maíz rellena con guiso de carne|15 g|40 g|390 kcal|2.8|2|6|0.12|10|0.05
+28|Martes|Filete de Merluza|Plato principal|Almuerzo|Pescado a la plancha con ensalada de lechuga y tomate|30 g|15 g|350 kcal|6.5|3|99|0.2|11|0.05|10|0.05
+29|Miércoles|Arepa con Salchichas|Desayuno|Desayuno|Arepa rellena con salchichas guisadas|18 g|45 g|440 kcal|3.2|2|6|0.1|50|2.0
+30|Miércoles|Sopa de Lagarto|Plato principal|Almuerzo|Sopa de carne con hueso y abundantes verduras|25 g|45 g|400 kcal|4.5|3|80|0.2|34|0.1|29|0.1
+31|Jueves|Empanada de Pollo|Desayuno|Desayuno|Empanada frita de pollo mechado|18 g|38 g|410 kcal|2.5|2|101|0.1|107|0.1
+32|Jueves|Carne Guisada con Papas|Plato principal|Almuerzo|Trozos de carne suaves cocinados con papas y arroz|30 g|60 g|620 kcal|5.5|3|10|0.15|11|0.15|1|0.1
+33|Viernes|Arepa Catira|Desayuno|Desayuno|Arepa con pollo mechado y queso amarillo rayado|22 g|42 g|490 kcal|4.0|3|6|0.1|107|0.1|5|0.05
+34|Viernes|Bistec a la Criolla|Plato principal|Almuerzo|Carne de res con cebolla y tomate encima y arroz|32 g|50 g|580 kcal|6.0|4|10|0.2|9|0.05|10|0.05|1|0.1
+35|Sábado|Parrilla Familiar|Plato principal|Almuerzo|Carne, pollo, chorizo, yuca y ensalada|45 g|40 g|950 kcal|12.0|4|10|0.2|2|0.15|91|0.1|30|0.1
+36|Sábado|Arepa Cabimera|Desayuno|Desayuno|Arepa frita con múltiples rellenos y salsas|30 g|55 g|850 kcal|6.5|4|6|0.1|10|0.1|16|1.0|42|0.02
+37|Domingo|Sopa de Mondongo|Plato principal|Almuerzo|Sopa de panza de res con verduras y especias|28 g|50 g|550 kcal|5.5|3|80|0.2|34|0.1|29|0.1
+38|Domingo|Pancakes con Fruta|Desayuno|Desayuno|Panquecas con miel y trozos de cambur|10 g|65 g|450 kcal|3.5|3|49|0.1|16|1.0|48|0.1
+39|Lunes|Empanada de Carne Molida|Desayuno|Desayuno|Empanada frita con carne molida guisada|16 g|40 g|430 kcal|2.5|2|101|0.1|10|0.08
+40|Lunes|Lentejas con Arroz|Plato principal|Almuerzo|Sopa de lentejas espesa con arroz blanco|18 g|70 g|520 kcal|3.5|3|18|0.12|1|0.1|91|0.03
+41|Martes|Arepa con Tortilla|Desayuno|Desayuno|Arepa rellena con tortilla de huevo y cebollín|14 g|45 g|390 kcal|3.0|3|6|0.1|16|2.0|23|0.01
+42|Martes|Muslo de Pollo al Horno|Plato principal|Almuerzo|Pollo al horno con ensalada rusa (papa/zanahoria)|30 g|35 g|550 kcal|5.2|4|2|0.25|11|0.1|38|0.05|42|0.02
+43|Miércoles|Mandoca con Queso|Desayuno|Desayuno|Anillo de maíz y plátano frito con queso|12 g|60 g|580 kcal|3.5|3|19|0.1|6|0.05|5|0.05
+44|Miércoles|Pastel de Pollo|Plato principal|Almuerzo|Pollo mechado cubierto de masa de pan integral|25 g|55 g|600 kcal|4.8|2|107|0.15|60|0.1
+45|Jueves|Pan con Huevo Frito|Desayuno|Desayuno|Pan francés con huevo y mantequilla|15 g|40 g|420 kcal|2.8|3|52|2.0|16|1.0|25|0.01
+46|Jueves|Albóndigas en Salsa|Plato principal|Almuerzo|Bolas de carne en salsa de tomate con pasta|28 g|65 g|680 kcal|5.5|3|10|0.15|15|0.12|28|0.05
+47|Viernes|Arepa Sifrina|Desayuno|Desayuno|Reina pepiada con queso amarillo extra|22 g|42 g|610 kcal|5.0|4|6|0.1|2|0.1|42|0.02|5|0.05
+48|Viernes|Cazón Guisado con Arroz|Plato principal|Almuerzo|Pescado desmenuzado con arroz y tajadas|25 g|60 g|590 kcal|5.8|3|103|0.15|1|0.1|19|0.1
+49|Sábado|Empanada de Queso y Jamón|Desayuno|Desayuno|Empanada frita rellena de doble sabor|15 g|40 g|480 kcal|3.2|3|101|0.1|5|0.04|32|0.04
+50|Sábado|Chivo en Coco|Plato principal|Almuerzo|Carne de chivo en salsa de coco con arroz|35 g|55 g|800 kcal|8.5|3|10|0.2|1|0.1|75|0.05
+51|Domingo|Arepa de Pernil|Desayuno|Desayuno|Arepa rellena con cerdo asado y tomate|28 g|42 g|650 kcal|5.5|3|6|0.1|31|0.15|10|0.05
+52|Domingo|Pollo Guisado|Plato principal|Almuerzo|Pollo en salsa con vegetales y arroz|30 g|60 g|600 kcal|4.5|4|2|0.25|9|0.02|10|0.02|1|0.1
+53|Lunes|Cereal con Leche|Desayuno|Desayuno|Avena en hojuelas con leche y azúcar|10 g|60 g|350 kcal|2.5|3|43|0.08|68|0.2|17|0.01
+54|Lunes|Hígado Encebollado|Plato principal|Almuerzo|Hígado de res salteado con mucha cebolla y arroz|32 g|45 g|520 kcal|4.0|3|79|0.15|9|0.1|1|0.1
+55|Lunes|Fruta picada|Acompañante|Desayuno|Porción de frutas de temporada (papaya, cambur y piña)|1 g|25 g|120 kcal|1.00|0
+56|Lunes|Café con leche|Bebida|Desayuno|Café con leche descremada|6 g|8 g|80 kcal|0.80|0
+57|Martes|Pan tostado con mantequilla|Acompañante|Desayuno|Dos rebanadas de pan tostado con mantequilla|5 g|30 g|220 kcal|1.20|0
+58|Martes|Jugo de naranja|Bebida|Desayuno|Vaso de jugo natural de naranja|2 g|26 g|110 kcal|0.90|0
+59|Miércoles|Yogur con granola|Acompañante|Desayuno|Yogur natural con granola y miel|9 g|35 g|260 kcal|1.50|0
+60|Miércoles|Té frío|Bebida|Desayuno|Té frío endulzado|0 g|18 g|70 kcal|0.70|0
+61|Jueves|Tostadas integrales|Acompañante|Desayuno|Tostadas integrales con queso crema|7 g|28 g|240 kcal|1.40|0
+62|Jueves|Café negro|Bebida|Desayuno|Café negro tradicional|0 g|0 g|5 kcal|0.60|0
+63|Viernes|Ensalada de frutas|Acompañante|Desayuno|Ensalada de frutas con un toque de miel|2 g|30 g|140 kcal|1.30|0
+64|Viernes|Chocolate caliente|Bebida|Desayuno|Chocolate caliente con leche|8 g|22 g|190 kcal|1.10|0
+65|Martes|Arroz con vegetales|Acompañante|Almuerzo|Arroz salteado con zanahoria y maíz|5 g|55 g|280 kcal|1.60|0
+66|Martes|Ensalada mixta|Ensalada|Almuerzo|Lechuga, tomate y pepino con limón|2 g|10 g|60 kcal|1.20|0
+67|Martes|Papelón con limón|Bebida|Almuerzo|Bebida de papelón con limón|0 g|20 g|80 kcal|0.90|0
+68|Lunes|Ensalada rayada|Ensalada|Almuerzo|Repollo y zanahoria rallados con limón|2 g|12 g|70 kcal|1.10|0
+69|Lunes|Jugo de guayaba|Bebida|Almuerzo|Vaso de jugo de guayaba|1 g|24 g|100 kcal|0.90|0
+70|Miércoles|Ensalada de repollo|Ensalada|Almuerzo|Repollo, zanahoria y aderezo ligero|2 g|14 g|85 kcal|1.10|0
+71|Miércoles|Jugo de tamarindo|Bebida|Almuerzo|Bebida natural de tamarindo|0 g|22 g|90 kcal|0.90|0
+72|Jueves|Puré de papas|Acompañante|Almuerzo|Puré de papas cremoso|4 g|35 g|210 kcal|1.50|0
+73|Jueves|Ensalada verde|Ensalada|Almuerzo|Lechuga, pepino y aguacate|3 g|9 g|110 kcal|1.40|0
+74|Jueves|Jugo de parchita|Bebida|Almuerzo|Jugo natural de parchita|1 g|26 g|105 kcal|0.95|0
+75|Viernes|Tostones|Acompañante|Almuerzo|Plátano verde frito (tostones)|2 g|40 g|260 kcal|1.40|0
+76|Viernes|Ensalada de tomate y pepino|Ensalada|Almuerzo|Tomate y pepino con limón y sal|2 g|8 g|50 kcal|1.10|0
+77|Viernes|Refresco de limón|Bebida|Almuerzo|Bebida sabor limón|0 g|18 g|72 kcal|0.80|0
