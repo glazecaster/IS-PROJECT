@@ -91,6 +91,14 @@ public class ComeUCVController {
             } catch (Exception ignored) {}
             return true;
         });
+
+        view.getMonederoPanel().setOnSaldoPana(() -> {
+            view.selectSaldoPana();
+        });
+
+        view.getSaldoPanaView().setOnRegresar(() -> {
+            view.selectTabMonedero();
+        });
     }
 
     private void aplicarTarifas(List<MenuDia> menus, String tipoServicio) {

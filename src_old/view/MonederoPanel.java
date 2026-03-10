@@ -12,11 +12,18 @@ public class MonederoPanel extends JPanel {
     private final JTextField txtRecarga = new JTextField(10);
     private final JButton btnRecargar = new JButton("Recargar");
 
+    private final JButton btnSaldoPana = new JButton("Saldo Pana");
+
     public interface RecargaListener {
         boolean onRecargar(double monto);
     }
 
+    public interface SaldoPanaListener {
+        void onMostrarSaldoPana();
+    }
+
     private RecargaListener recargaListener;
+    private SaldoPanaListener saldoPanaListener;
 
     public MonederoPanel() {
         setLayout(new GridBagLayout());
@@ -62,6 +69,8 @@ public class MonederoPanel extends JPanel {
 
         body.add(Box.createVerticalStrut(18));
         body.add(buildRecargaRow());
+
+        body.add(Box.createVerticalStrut(18));
 
         card.add(titulo, BorderLayout.NORTH);
         card.add(body, BorderLayout.CENTER);
@@ -121,6 +130,16 @@ public class MonederoPanel extends JPanel {
         row.add(lbl);
         row.add(txtRecarga);
         row.add(btnRecargar);
+
+        btnSaldoPana.setFocusPainted(false);
+        btnSaldoPana.setBackground(ComeUCVView.AZUL_OSCURO);
+        btnSaldoPana.setForeground(Color.WHITE);
+        btnSaldoPana.addActionListener(e -> {
+            if (saldoPanaListener != null) {
+                saldoPanaListener.onMostrarSaldoPana();
+            }
+        });
+        row.add(btnSaldoPana);
         return row;
     }
 
@@ -146,4 +165,5 @@ public class MonederoPanel extends JPanel {
     public void setSaldo(String saldo) { lblSaldo.setText("$" + saldo); }
 
     public void setOnRecargar(RecargaListener l) { this.recargaListener = l; }
+    public void setOnSaldoPana(SaldoPanaListener l) { this.saldoPanaListener = l; }
 }

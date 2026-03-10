@@ -4,6 +4,8 @@ import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
+import view.SaldoPanaView;
+
 public class ComeUCVView extends JFrame {
 
     public static final Color AZUL_OSCURO = new Color(0x0B2D5B);
@@ -14,6 +16,7 @@ public class ComeUCVView extends JFrame {
     private final JPanel cards = new JPanel(new CardLayout());
     public static final String CARD_MENUS = "menus";
     public static final String CARD_MONEDERO = "monedero";
+    public static final String CARD_SALDO_PANA = "saldo_pana";
 
     private final JToggleButton tabMenus = new JToggleButton("Menús disponibles");
     private final JToggleButton tabMonedero = new JToggleButton("Mi monedero");
@@ -21,6 +24,7 @@ public class ComeUCVView extends JFrame {
 
     private final MenusDisponiblesPanel menusPanel = new MenusDisponiblesPanel();
     private final MonederoPanel monederoPanel = new MonederoPanel();
+    private final SaldoPanaView saldoPanaView = new SaldoPanaView();
     private final HeaderPanel header = new HeaderPanel("COMEUCV");
 
     private final JButton btnSalir = new JButton("Salir");
@@ -44,6 +48,7 @@ public class ComeUCVView extends JFrame {
         cards.setBackground(BLANCO);
         cards.add(menusPanel, CARD_MENUS);
         cards.add(monederoPanel, CARD_MONEDERO);
+        cards.add(saldoPanaView, CARD_SALDO_PANA);
 
         JPanel center = new JPanel(new BorderLayout());
         center.setBackground(BLANCO);
@@ -152,6 +157,10 @@ public class ComeUCVView extends JFrame {
         showCard(CARD_MONEDERO);
     }
 
+    public void selectSaldoPana() {
+        showCard(CARD_SALDO_PANA);
+    }
+
     
     public void setMenusEnabled(boolean enabled) {
         menusEnabled = enabled;
@@ -171,6 +180,7 @@ public class ComeUCVView extends JFrame {
     public JToggleButton getTabMonedero() { return tabMonedero; }
     public MenusDisponiblesPanel getMenusPanel() { return menusPanel; }
     public MonederoPanel getMonederoPanel() { return monederoPanel; }
+    public SaldoPanaView getSaldoPanaView() { return saldoPanaView; }
 
     public void setOnSalir(Runnable r) { this.onSalir = r; }
 }
