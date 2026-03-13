@@ -1,0 +1,2 @@
+Costo Fijo|Lunes|transporte|40|2 semanas
+Costo Variable|Lunes|trasnporte-alimentos|20|1 semanas

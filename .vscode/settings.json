@@ -1,0 +1,5 @@
+{
+  "java.project.sourcePaths": ["src_old", "test"],
+  "java.project.outputPath": "bin",
+  "java.project.referencedLibraries": ["lib/**/*.jar"]
+}

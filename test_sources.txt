@@ -1,0 +1,8 @@
+test/ArchivoServicioTest.java
+test/CostoTest.java
+test/MenuServicioTest.java
+test/MenuTest.java
+test/MonederoTest.java
+test/UsuarioServicioTest.java
+test/CCBCalculatorTest.java
+test/MenuSemanaTest.java

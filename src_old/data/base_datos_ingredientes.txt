@@ -1,0 +1,111 @@
+1|Arroz|kg|2.5|100.0|Granos
+2|Pollo|kg|5.8|50.0|Carnes
+3|Tomate|kg|1.2|30.0|Verduras
+4|Cebolla|kg|0.9|40.0|Verduras
+5|Queso Blanco|kg|8.5|20.0|Lácteos
+6|Harina de Maíz|kg|1.8|60.0|Granos
+7|Aceite|litro|3.2|30.0|Aceites
+8|Sal|kg|0.5|10.0|Condimentos
+9|Papa|kg|1.1|80.0|Verduras
+10|Carne Molida|kg|7.5|40.0|Carnes
+11|Lechuga|unidad|0.8|25.0|Verduras
+12|Huevos|unidad|0.25|200.0|Lácteos
+13|fg|kg|10.0|10.0|Granos
+13|Harina de Maíz|kg|1.8|60.0|Granos
+14|Caraotas Negras|kg|2.50|50.0|Granos
+15|Pasta (Larga/Corta)|kg|1.50|80.0|Cereales
+16|Huevos|unidad|0.25|200.0|Lácteos
+17|Azúcar|kg|1.40|20.0|Dulces
+18|Lentejas|kg|2.10|45.0|Granos
+19|Plátano|kg|1.30|50.0|Frutas/Verduras
+20|Ajo|kg|6.50|5.0|Aliños
+21|Ají Dulce|kg|2.50|10.0|Aliños
+22|Pimentón|kg|3.00|12.0|Verduras
+23|Cilantro/Perejil|manojo|0.50|15.0|Aliños
+24|Leche en Polvo|kg|9.80|10.0|Lácteos
+25|Mantequilla/Margarina|500g|2.80|20.0|Grasas
+26|Adobo/Condimento Mixto|kg|4.50|5.0|Condimentos
+27|Café Molido|kg|8.00|10.0|Bebidas
+28|Salsa de Tomate|kg|2.20|15.0|Salsas
+29|Auyama|kg|0.80|30.0|Verduras
+30|Yuca|kg|0.90|40.0|Tubérculos
+31|Mortadela Especial|kg|4.2|15.0|Charcutería
+32|Jamón de Espalda|kg|6.8|12.0|Charcutería
+33|Suero de Leche|litro|2.5|10.0|Lácteos
+34|Ocumo|kg|1.4|25.0|Tubérculos
+35|Ñame|kg|1.6|20.0|Tubérculos
+36|Calabacín|kg|1.1|15.0|Verduras
+37|Repollo Blanco|kg|0.9|20.0|Verduras
+38|Zanahoria|kg|1.4|30.0|Verduras
+39|Comino Molido|kg|5.5|2.0|Condimentos
+40|Color (Onoto)|kg|4.8|3.0|Condimentos
+41|Vinagre Blanco|litro|1.2|10.0|Despensa
+42|Mayonesa|frasco 445g|2.6|12.0|Salsas
+43|Avena en Hojuelas|kg|2.8|15.0|Cereales
+44|Fororo|kg|1.9|20.0|Cereales
+45|Chicha de Arroz|kg|3.5|10.0|Bebidas
+46|Papelón (Panela)|unidad|1.8|30.0|Dulces
+47|Guayaba|kg|1.2|25.0|Frutas
+48|Cambur|kg|0.8|40.0|Frutas
+49|Harina de Trigo|kg|1.5|30.0|Harinas
+50|Salchichas|paquete|3.2|20.0|Carnes
+51|Pan Canilla|unidad|0.50|100.0|Panadería
+52|Pan Francés|unidad|0.25|200.0|Panadería
+53|Pan de Sándwich|paquete|2.80|30.0|Panadería
+54|Pan Campesino|unidad|1.20|40.0|Panadería
+55|Pan Dulce (Apiñonado)|unidad|0.80|50.0|Panadería
+56|Pan de Hamburguesa|paquete (8)|3.50|15.0|Panadería
+57|Pan de Perro Caliente|paquete (8)|3.20|15.0|Panadería
+58|Acemas|unidad|0.60|40.0|Panadería
+59|Galletas de Soda|paquete|1.80|25.0|Despensa
+60|Pan Integral|paquete|3.50|10.0|Panadería
+61|Pan de Guayaba|unidad|2.50|20.0|Panadería
+62|Chocolate en Tableta|unidad|1.80|50.0|Dulces
+63|Cemitas|unidad|0.70|40.0|Panadería
+64|Piñitas|unidad (bolsa)|3.50|15.0|Panadería
+65|Mango|kg|0.50|60.0|Frutas
+66|Manzana|unidad|1.20|30.0|Frutas
+67|Avena en Polvo|kg|3.20|20.0|Bebidas
+68|Leche Líquida|litro|1.80|40.0|Lácteos
+69|Café en Grano/Molido|kg|8.50|15.0|Bebidas
+70|Preparación Café con Leche|litro|2.20|20.0|Bebidas
+71|Seven Up (2L)|unidad|2.80|24.0|Sodas
+72|Coca-Cola (2L)|unidad|2.90|24.0|Sodas
+73|Malta (Tercio)|unidad|1.00|48.0|Sodas
+74|Bocadillo de Guayaba|unidad|0.40|100.0|Dulces
+75|Conservas de Coco|unidad|1.20|30.0|Dulces
+76|Dulce de Lechosa|kg|12.00|10.0|Dulces
+77|Arroz con Leche|porción|1.50|50.0|Dulces
+78|Sardinas en Lata|unidad|0.80|60.0|Proteínas
+79|Hígado de Res|kg|3.50|15.0|Proteínas
+80|Costilla de Res|kg|4.00|25.0|Proteínas
+81|Parchita|kg|2.50|20.0|Frutas
+82|Piña|unidad|2.00|15.0|Frutas
+83|Guayaba (Fruta)|kg|1.20|30.0|Frutas
+84|Jugo de Naranja (1.5L)|unidad|3.50|20.0|Bebidas
+85|Néctar de Durazno (1L)|unidad|2.20|15.0|Bebidas
+86|Agua Mineral (5L)|unidad|2.50|12.0|Bebidas
+87|Té Frío (Fuze Tea)|unidad|1.20|30.0|Sodas
+88|Papelón con Limón|litro|1.50|25.0|Bebidas
+89|Toddy (400g)|unidad|5.50|10.0|Bebidas
+90|Mermelada de Guayaba|unidad|2.80|12.0|Dulces
+91|Chorizo Ahumado|kg|7.50|10.0|Charcutería
+92|Arvejas Amarillas|kg|1.80|30.0|Granos
+93|Arvejas Verdes|kg|1.90|30.0|Granos
+94|Maíz para Cotufas|kg|2.20|15.0|Cereales
+95|Salsa Inglesa|unidad (290ml)|1.80|10.0|Condimentos
+96|Salsa de Soya|unidad (290ml)|1.70|10.0|Condimentos
+97|Cubitos (Caldo de Pollo)|caja (24 ud)|3.50|5.0|Condimentos
+98|Salsa Picante|unidad|1.20|8.0|Salsas
+99|Pescado Salado (Tipo Cazón)|kg|6.50|12.0|Proteínas
+100|Mojo Canario/Vasco|unidad|2.50|10.0|Salsas
+101|Masa de Empanada|kg|2.0|50.0|Harinas
+102|Carne para Mechar (Falda)|kg|7.8|40.0|Carnes
+103|Cazón (Pescado Desmenuzado)|kg|5.5|20.0|Proteínas
+104|Jamón de Pavo|kg|8.5|15.0|Charcutería
+105|Mantecas/Grasa de Cerdo|kg|3.0|10.0|Grasas
+106|Harina de Trigo (Todo uso)|kg|1.4|30.0|Harinas
+107|Pollo Mechado (Pechuga)|kg|6.2|30.0|Carnes
+108|Papelón Molido|kg|2.1|20.0|Dulces
+109|Levadura|unidad|0.8|15.0|Panadería
+110|Suero Criollo|litro|2.2|15.0|Lácteos
